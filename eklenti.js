@@ -4,7 +4,7 @@ module.exports = {
 	},
 	kullaniciProfil: user => {
 	const lastName = user.last_name ? ` <b>${user.last_name}</b>` : '';
-	const username = user.username ? ` \n\n<b>👤Kullanıcı Adı: @${user.username}</b>` : '';
+	const username = user.username ? ` \n\n<b>👤İstifadəçi adı: @${user.username}</b>` : '';
 	const userBio = user.bio ? ` \n\n<b>📖Bio: ${user.bio}</b>` : '';
 	return `<b>Ad: <a href="tg://user?id=${user.id}">${user.first_name}${lastName}</a></b>${username}${userBio}\n\n🆔: <code>${user.id}</code>`;
     },
