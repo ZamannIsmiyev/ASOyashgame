@@ -1,6 +1,6 @@
 {
-  "name": "Tesla Game V1 Versiyon",
-  "description": " @TeslaGameBot'un Eski Alt Versiyon Projesi GitHub'da Kullanıcılara Açık Sunuldu.",
+  "name": "ASO Game V1 Versiyon",
+  "description": " @ASOyash_bot'un Eski Alt Versiyon Projesi GitHub'da Kullanıcılara Açık Sunuldu.",
   "repository": "https://github.com/sirincay/TeslaGamev1",
   "logo": "https://avatars.githubusercontent.com/u/88708263?s=96&v=4",
   "keywords": ["telegram", "bot"],
@@ -15,15 +15,15 @@
     },
     "BOT_ISMI": {
       "description": "Botun Kullanıcı Adını '@' Olmadan Yazın",
-      "value": "TeslaGameBot"
+      "value": "ASOyash_bot"
     },
     "RAUND_SAYI": {
       "description": "RAUND SAYISI (3-5) İdeal aralık ",
-      "value": "3"
+      "value": "20"
     },
     "SANIYE": {
       "description": "Resimlerin Değişmesi Süresi / 10000=10 Saniye",
-      "value": "10000"
+      "value": "20000"
       }
   },
   "buildpacks": [
