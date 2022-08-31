@@ -75,7 +75,7 @@ const OyunYaratHusnuEhedov = chatId => {
 }
 
 const ozelMesaj = isGroup => Degisken(`
-    *Salam,👋 Mən təxmin oyun botuyam zamanınızı əyləncəli keçirmək üçün\nməni qrupuna əlavə et @ASOresmi 🙂*
+    *Salam,👋 Mən təxmin oyun botuyam zamanınızı əyləncəli keçirmək üçün\nməni qrupuna əlavə et @ASOyashqalib 🙂*
     ${isGroup ? "" : "\n*Əsas əmrlərin siyahısı üçün /komek*"}
 `)
 
@@ -149,7 +149,7 @@ const OyunDurdurHusnuEhedov = (ctx, chatId) => {
 		}
 	}
 	else {
-		ctx.reply("🆘 Oyun başlamadı... 🙅🏻\nOyunu başlat ➡️  /basla")
+		ctx.reply("🆘 Oyun başlamadı... 🙅🏻\nOyunu başlat ➡️ @ASOyashqalib  /basla")
 	}
 }
 const RaundMesajHusnuEhedov = (chatId, round, time) => {
@@ -230,7 +230,7 @@ const OyunHusnuEhedov = (ctx, chatId) => {
 			if (!top.every(member => member.answer === null)) {
 				ctx.replyWithMarkdown(
 					Degisken(`
-						✅ Şəkildəki şəxs: *${rightAnswer} ${HusnuEhedov(rightAnswer, "yaşında", "yaşında", "yaşında")}*\n*⭐️Xal qalibləri:*
+						✅ Şəkildəki şəxs: @ASOyashqalib *${rightAnswer} ${HusnuEhedov(rightAnswer, "yaşında", "yaşında", "yaşında")}*\n*⭐️Xal qalibləri:*
 
 						${top.sort((a, b) => b.addScore - a.addScore).map((member, index) => `${["🥇","🎖","🏅"][index] || "🔸"} ${index + 1}. *${member.firstName}*: ${ArtiEksi(member.addScore)}`).join("\n")}
 					`),
