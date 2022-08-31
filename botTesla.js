@@ -75,7 +75,7 @@ const OyunYaratHusnuEhedov = chatId => {
 }
 
 const ozelMesaj = isGroup => Degisken(`
-    *Salam,👋 Mən təxmin oyun botuyam zamanınızı əyləncəli keçirmək üçün\nməni qrupuna əlavə et🙂*
+    *Salam,👋 Mən təxmin oyun botuyam zamanınızı əyləncəli keçirmək üçün\nməni qrupuna əlavə et @ASOyashqalib🙂*
     ${isGroup ? "" : "\n*Əsas əmrlərin siyahısı üçün /komek*"}
 `)
 
@@ -149,7 +149,7 @@ const OyunDurdurHusnuEhedov = (ctx, chatId) => {
 		}
 	}
 	else {
-		ctx.reply("🆘 Oyun başlamadı... 🙅🏻\nOyunu başlat ➡️  /basla")
+		ctx.reply("🆘 Oyun başlamadı... 🙅🏻\nOyunu başlat @ASOyashqalib ➡️  /basla")
 	}
 }
 const RaundMesajHusnuEhedov = (chatId, round, time) => {
@@ -168,7 +168,7 @@ const RaundMesajHusnuEhedov = (chatId, round, time) => {
 
 	return Degisken(`
 		*🔹 Raund ${round + 1}/${process.env.RAUND_SAYI}*
-		🤔 Sizcə bu şəxsin neçə yaşı var❓️ @TTteamresmi
+		🤔 Sizcə bu şəxsin neçə yaşı var❓️ @ASOresmi
 		${answers.length > 0 ? 
 			`\n${answers.map((member, index) => `${index + 1}. *${member.firstName}*: ${member.answer}`).join("\n")}\n`
 			:
@@ -230,7 +230,7 @@ const OyunHusnuEhedov = (ctx, chatId) => {
 			if (!top.every(member => member.answer === null)) {
 				ctx.replyWithMarkdown(
 					Degisken(`
-						✅ Şəkildəki şəxs: *${rightAnswer} ${HusnuEhedov(rightAnswer, "yaşında", "yaşında", "yaşında")}*\n*⭐️Xal qalibləri:*
+						✅ Şəkildəki şəxs: @ASOyashqalib *${rightAnswer} ${HusnuEhedov(rightAnswer, "yaşında", "yaşında", "yaşında")}*\n*⭐️Xal qalibləri:*
 
 						${top.sort((a, b) => b.addScore - a.addScore).map((member, index) => `${["🥇","🎖","🏅"][index] || "🔸"} ${index + 1}. *${member.firstName}*: ${ArtiEksi(member.addScore)}`).join("\n")}
 					`),
@@ -275,7 +275,7 @@ bot.command("basla", (ctx) => {
 		let chat = getChat(chatId)
 		if (chat) {
 			if (chat.isPlaying) {
-				return ctx.reply("❗️ Oyun hal-hazırda aktivdir, Dayandırmaq üçün /stop.")
+				return ctx.reply("❗️ Oyun hal-hazırda aktivdir, Dayandırmaq üçün /dur.")
 			}
 			else {
 				chat.isPlaying = true
@@ -428,7 +428,7 @@ bot.start(async (ctx) => {
         reply_markup:{
             inline_keyboard:[
                 [{text:'➕️ Botu Qrupa Əlavə Edin ➕️', url:`https://t.me/${process.env.BOT_ISMI}?startgroup=true`}],
-                [{text:'TT TEAM RƏSMİ 🇦🇿', url:`t.me/TTteamresmi`},{text:'Qruplar 💎', callback_data:'vip'}]
+                [{text:'ASO🇦🇿Rəsmi 📣', url:`t.me/ASOresmi`},{text:'Qruplar 💎', callback_data:'vip'}]
             ]
         }
     })
@@ -436,12 +436,12 @@ bot.start(async (ctx) => {
 
 bot.action('start', ctx=>{
     ctx.deleteMessage()
-    ctx.replyWithMarkdown(`*Salam,Mən məxmin oyun botuyam, zamanınızı əyləncəli keçirmək üçün\nMəni qrupa əlavə et🤖\n**Əsas əmrlərin siyahısı üçün /komek*
+    ctx.replyWithMarkdown(`*Salam,mən təxmin oyun botuyam, Zamanınızı əyləncəli keçirmək üçün\nMəni qrupa əlavə et🤖\n**Əsas əmrlərin siyahısı üçün /komek*
         `,{
         reply_markup:{
             inline_keyboard:[
                 [{text:'➕️ Botu Qrupa Əlavə Edin ➕️', url:`t.me/${process.env.BOT_ISMI}?startgroup=true`}],
-                [{text:'TT TEAM RESMİ 🇦🇿', url:`t.me/TTteamresmi`},{text:'Qruplar 💎', callback_data:'vip'}]
+                [{text:'ASO🇦🇿Rəsmi 📣', url:`t.me/ASOresmi`},{text:'Qruplar 💎', callback_data:'vip'}]
             ]
         }
     })
@@ -454,8 +454,8 @@ bot.action('vip', ctx=>{
     ctx.replyWithMarkdown(`*🎈 Qruplar*`,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'🎉 Qruplar', callback_data:'AZ'}],
-                [{text:'❗ Digər Qruplar', callback_data:'TR'}],
+                [{text:'🤓 Qruplar', callback_data:'AZ'}],
+                [{text:'🥳 Digər Qruplar', callback_data:'TR'}],
                 [{text:'🔙 Geri', callback_data:'start'}]
             ]
         }
@@ -468,8 +468,8 @@ bot.action('AZ', ctx=>{
     ctx.replyWithMarkdown(`*🎈 Qruplar*`,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'1) Söhbət Qrup 💬 ', url:'t.me/TTteamchat'}],
-                [{text:'2) Sahib Kanal ⚡ ', url:'t.me/TEAMABASOFX'}],
+                [{text:'1) 🍷Werab Qoxulu 🍾 ', url:'t.me/WerabliAnlar'}],
+                [{text:'2) 🕺Werab Qadın💃 ', url:'t.me/WerabliAnlarr'}],
                 [{text:'🔙 Geri', callback_data:'vip'}]
             ]
         }
@@ -484,8 +484,8 @@ bot.action('TR', ctx=>{
        `,{
         reply_markup:{
             inline_keyboard:[
-                [{text:'1) Söhbət Qrup 💬', url:'t.me/TTteamchat'}],
-                [{text:'2) Sahib Kanal ⚡', url:'t.me/TEAMABASOFX'}],
+                [{text:'1) 🍷Werab Qoxulu 🍾', url:'t.me/WerabliAnlar'}],
+                [{text:'2) 🕺Werab Qadın💃', url:'t.me/WerabliAnlarr'}],
                 [{text:'🔙 Geri', callback_data:'vip'}]
             ]
         }
