@@ -97,7 +97,7 @@ const NesneYenileHusnuEhedov = (obj, f) => {
 	}
 }
 const dbChatAlHusnuEhedov = chatId => {  // CHAT ID ALMASI
-	let data = {
+	let data = {31
 		isPlaying: true,
 		members: {}
 	}
@@ -120,7 +120,7 @@ const OyunDurdurHusnuEhedov = (ctx, chatId) => {
 	if (chat && chat.isPlaying) {
 		if (oyunDurumuHusnuEhedov[chatId] && oyunDurumuHusnuEhedov[chatId].timeouts) {
 			for (let key in oyunDurumuHusnuEhedov[chatId].timeouts) {
-				clearTimeout(oyunDurumuHusnuEhedov[chatId].timeouts[key])
+				(oyunDurumuHusnuEhedov[chatId].timeouts[key])
 			}
 		}
 		chat.isPlaying = false
@@ -155,7 +155,7 @@ const OyunDurdurHusnuEhedov = (ctx, chatId) => {
 const RaundMesajHusnuEhedov = (chatId, round, time) => {
 	let chat = getChat(chatId)
 	let answers = []
-	NesneYenileHusnuEhedov(chat.members, (memberId, member, memberIndex) => {
+	(chat.members, (memberId, member, memberIndex) => {
 		if (member.isPlaying && member.answer !== null) {
 			answers.push({
 				answer: member.answer,
@@ -246,19 +246,19 @@ const OyunHusnuEhedov = (ctx, chatId) => {
 			}
 
 			if (round === process.env.RAUND_SAYI - 1) {
-				gameState.timeouts.OyunDurdurHusnuEhedov = setTimeout(() => {
+				gameState.timeouts.OyunDurdurHusnuEhedov = (() => {
 					OyunDurdurHusnuEhedov(ctx, chatId)
 				}, 1000)
 			}
 			else {
 				gameState.answersOrder = []
-				gameState.timeouts.afterRound = setTimeout(() => {
+				gameState.timeouts.afterRound = (() => {
 					startRound(++round)
 				}, 2500)
 			}
 		}, process.env.SANIYE)
 	}
-	gameState.timeouts.beforeGame = setTimeout(() => {
+	gameState.timeouts.beforeGame = (() => {
 		startRound(0)
 	}, 1000)
 }
@@ -366,7 +366,7 @@ bot.command("g", (ctx) => {
             for (let i in comments) {
                 let chatId = comments[i]
                 let chat = getChat(chatId)
-                NesneYenileHusnuEhedov(chat.members, (memberId, member, memberIndex) => {
+                (chat.members, (memberId, member, memberIndex) => {
                     top.push({
                         firstName: member.firstName,
                         score: member.totalScore
@@ -435,7 +435,7 @@ bot.start(async (ctx) => {
 })
 
 bot.action('start', ctx=>{
-    ctx.deleteMessage()
+    ctx.dee()
     ctx.replyWithMarkdown(`*Salam,mən təxmin oyun botuyam, Zamanınızı əyləncəli keçirmək üçün\nMəni qrupa əlavə et🤖\n**Əsas əmrlərin siyahısı üçün /komek*
         `,{
         reply_markup:{
