@@ -515,7 +515,7 @@ bot.on("message", async (ctx) => {
 			let answer = Number(message.text)
 			if (answer <= 0 || answer > 100) {
 				return ctx.reply(
-					"Cavab limiti (1 - 100)",
+					"Cavab limiti (1 - 100) @ASOyashqalib 😃",
 					{
 						reply_to_message_id: ctx.message.message_id,
 					}
