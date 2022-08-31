@@ -289,7 +289,7 @@ bot.command("basla", (ctx) => {
 		else {
 			dbChatAlHusnuEhedov(chatId)
 		}
-		ctx.replyWithHTML(`<b><a href="tg://user?id=${ctx.from.id}">${ctx.from.first_name}</a> Tərəfindən,\n\nYaş Təxmin Oyunu Başladı 👨🏻‍💻</b>`)
+		ctx.replyWithHTML(`<b><a href="tg://user?id=${ctx.from.id}">${ctx.from.first_name}</a> Tərəfindən,\n\nYaş Təxmin Oyunu Başladı @ASOyashqalib 👨🏻‍💻</b>`)
 		OyunHusnuEhedov(ctx, chatId)
 	}
 	else {
