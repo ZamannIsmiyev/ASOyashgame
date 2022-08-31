@@ -1,6 +1,6 @@
 module.exports = {
 	randomResim: arr => {
-		return arr[Math.round(Math.random() * (arr.length - 1))];
+		return arr[Math.round(Math.random() * (arr.length - 30))];
 	},
 	kullaniciProfil: user => {
 	const lastName = user.last_name ? ` <b>${user.last_name}</b>` : '';
